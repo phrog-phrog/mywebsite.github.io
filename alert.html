@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&family=Archivo+Black&family=Asap:ital@1&family=Titan+One&display=swap" rel="stylesheet">
+
+
+		<title>Alert Game</title>
+		<style type = "text/css">
+			.menu {
+				list-style: none;
+				padding-top: 10px;
+				margin: 0;
+				text-align: center;
+				border-bottom: 5px solid #e6800b;
+				border-top: 5px solid #e6800b;
+				background: linear-gradient(to right, #e6660b, #f5a351);
+				font-family: "advent pro";
+				font-size: 20px;
+				font-weight: bold;
+				text-transform: uppercase;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 4%;
+			}
+
+			.menu li{
+				display: inline-block;
+			}
+
+			body {
+				  background-image: linear-gradient(90deg, #FD7F20, #FDB750);
+			}
+
+			#maintitle {
+				position: sticky;
+				color: #000000;
+				font-family: "impact";
+				padding: 5px;
+				font-size: 75px;
+				background-image: url("https://o.remove.bg/downloads/4027ee62-ac24-4761-ae91-d34e6d3b5740/plam-trees-2486125-removebg-preview.png");
+				background-size: 400px;
+				background-position: center;
+			}
+
+			p {
+				font-family: "advent pro";
+				color: rgb(0,0,0);
+				font-size: 20px;
+			}
+
+			img {
+				border: solid black 5px;
+			}
+
+			#btn {
+			 	font-size: 20px;
+			 	font-family: "archivo black";
+			 	width: 150px;
+			 	height: 105px;
+			 	background-image: linear-gradient(135deg, #a36507, #eb7c1c);
+			 }
+
+			 #btn:hover {
+			 	background-image: linear-gradient(135deg,#eb7c1c, #a36507);
+			 }
+
+			 section.alert {
+				padding-top: 50px;
+				padding-bottom: 50px;
+				padding-left: 20px;
+				background-color: #de9012;
+				text-align: center;
+			}
+
+
+		</style>
+
+		</title>
+	</head>
+
+
+
+	<body>
+		<ul class = "menu">
+			<li><a href = "homepage.html#aboutme">About me</a></li>
+			<li><a href = "homepage.html#hobbys">Hobbys</a></li>
+			<li><a href = "homepage.html#favthings">Favorite Things</a></li>
+			<li><a href = "#alert">Alert Game</a></li>
+			<li><a href = "page2.html#form">Survey</a></li>
+		</ul>
+
+
+
+		<section id = "alert" class = "alert box">
+		<h1 id = "maintitle">Alert Minigame</h1>
+		<p><br></p>
+		<button id = "btn" onclick = "alert('I told you to not click me');">Don't click me!</button>
+		<p id = "clicksdisplay"></p>
+		<img id = "gameimages" src = "https://media.istockphoto.com/photos/crossroad-in-green-forest-picture-id951702988?k=20&m=951702988&s=612x612&w=0&h=UIsg3aIE7I0F0w8lhbD4I5ljpX_JguHMt4FPopJfsSk=" width = 350 height = 350>
+		</section>
+
+		<script>
+
+	      	if(document.getElementById("btn").onclick = 1) {
+	      			document.getElementById("gameimages").src = "https://media.istockphoto.com/photos/crossroad-in-green-forest-picture-id951702988?k=20&m=951702988&s=612x612&w=0&h=UIsg3aIE7I0F0w8lhbD4I5ljpX_JguHMt4FPopJfsSk=";
+	      	 		if(prompt("Walking down a worn out path in a dark forest, you encounter fork in the path. Do you go left or right? Answer l for left, and r for right") == "l"){
+	      	 			
+	      	 			document.getElementById("gameimages").src = "https://images.unsplash.com/photo-1514539079130-25950c84af65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FzdGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80";
+	      	 			if(prompt("Walking left, you encounter a large castle rising above the landscape. Do you enter or not? Answer y for yes, and n for no") == "y"){
+	      	 					
+	      	 					document.getElementById("gameimages").src = "https://i.pinimg.com/originals/32/42/d1/3242d110d1a0c8d86cde983f2fcdf635.jpg";
+	      	 					alert("After entering the castle, you notice the doors shut behind you. You are trapped in here for eternity. This adventure is over.");
+	      	 				
+	      	 				} else {
+	      	 					
+	      	 					document.getElementById("gameimages").src = "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-Alamy-BXWK5E_vvmkuf.jpg";
+	      	 					if(prompt("You walk around the castle, seeing a snow covered mountain past it. Do you hike up the moutain? Answer y for yes and n for no.") == "y"){
+	      	 							
+	      	 							document.getElementById("gameimages").src = "https://thumbs.dreamstime.com/b/alone-small-house-top-mountain-blue-clody-sky-forest-36058050.jpg";
+	      	 							if(prompt("After nearing the peak of the mountain, you are nearly frozen. You notice a small hut near you. Do you enter the hut? Answer y for yes, and n for no.") == "y"){
+	      	 									
+	      	 									document.getElementById("gameimages").src = "https://i.pinimg.com/originals/4d/29/7f/4d297fb650f652ffb7715860d2133729.jpg";
+	      	 									alert("You enjoy a nice converstation with the hermit that lives in the hut, and go home happily. You win!");
+	      	 							
+	      	 							} else {
+	      	 								
+	      	 								document.getElementById("gameimages").src = "https://img.freepik.com/premium-vector/hand-drawn-cartoon-doodle-skull-funny-cartoon-skull-isolated-white-background-vector-illustration_217204-801.jpg";
+	      	 								alert("Being too cold, you freeze to death. This adventure is over.")
+	      	 							}
+	      	 					
+	      	 					} else {
+	      	 						
+	      	 						document.getElementById("gameimages").src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tiny-houses-1579284305.png?crop=1.00xw:0.397xh;0,0.332xh&resize=640:*";
+	      	 						alert("Not going up the mountain, you soon grow bored and go back home. This adventure is over.");
+	      	 					}
+	      	 				}
+
+	      	 		} else{
+	      				
+	      				document.getElementById("gameimages").src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tiny-houses-1579284305.png?crop=1.00xw:0.397xh;0,0.332xh&resize=640:*";
+	      				alert("You walk right, turns out that was the path back to your house. This adventure is over.")
+	      	 		}
+	      	}
+    	</script>
+
+	</body>
+</html>
